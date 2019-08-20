@@ -3,7 +3,7 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerNgrokUrl": "https://cg-3z4.anonymous.typescript-starter.exp.direct",
+  "packagerNgrokUrl": "https://packager.cg-3z4.anonymous.typescript-starter.exp.direct",
+  "ngrokPid": 83771
 }

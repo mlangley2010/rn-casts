@@ -10,6 +10,8 @@ import SquareScreen from './src/screens/SquareScreen';
 import TextScreen from './src/screens/TextScreen';
 import BoxScreen from './src/screens/BoxScreen';
 import { FontAwesome } from '@expo/vector-icons';
+import { ThemeProvider } from 'react-native-elements';
+import { setNavigator } from './src/navigationRef';
 
 const trackListFlow = createStackNavigator({
   Image: ImageScreen,
@@ -42,8 +44,20 @@ const switchNavigator = createSwitchNavigator({
     Text: TextScreen,
     Box: BoxScreen,
     colorSquareFlow,
+    Home: HomeScreen,
   }),
 });
 
 const App = createAppContainer(switchNavigator);
-export default App;
+
+export default () => {
+  return (
+    <ThemeProvider>
+      <App
+        ref={navigator => {
+          setNavigator(navigator);
+        }}
+      />
+    </ThemeProvider>
+  );
+};
